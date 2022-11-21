@@ -1,0 +1,37 @@
+.containerRenderTotal {
+  width: 88%;
+  height: 6rem;
+  border: 0.063rem solid #e9ecef;
+  border-radius: 0.25rem;
+  margin-top: 1.25rem;
+}
+
+.containerValue {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.625rem;
+}
+
+.valueT {
+  width: 5.625rem;
+  background-color: transparent;
+  border: transparent;
+  align-items: center;
+  color: #FD377E;
+}
+
+.text {
+  font-size: 0.75rem;
+  text-align: justify;
+  padding-left: 0.625rem;
+  margin-top: -0.625rem;
+}
+
+@media(max-width: 959px) {
+  .containerRenderTotal {
+    width: 62%;
+    margin: auto;
+    margin-top: 0.625rem;
+  }
+}

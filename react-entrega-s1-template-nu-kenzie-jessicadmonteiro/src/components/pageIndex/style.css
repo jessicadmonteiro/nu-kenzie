@@ -1,0 +1,83 @@
+.divPageInitial {
+  width: 100vw;
+  height: 100vh;
+  background-color: #212529;
+}
+
+main {
+  display: flex;
+  justify-content: space-between;
+  width: 80%;
+  margin: auto;
+  padding-top: 3.125rem;
+}
+
+.containerLogoText {
+  width: 40%;
+  margin-top: 10%;
+}
+
+.titlePageInitial {
+  width: 80%;
+  font-size: 2.375rem;
+  text-align: left;
+  color: #ffffff;
+}
+
+.textPageInitial {
+  font-size: 1rem;
+  color: #ffffff;
+  text-align: justify;
+}
+
+.butInicial {
+  width: 55%;
+  height: 3rem;
+  background: #fd377e;
+  color: #ffffff;
+  border: 0.125rem solid #fd377e;
+  border-radius: 0.5rem;
+}
+
+.containerImagem {
+  width: 55%;
+}
+
+.containerImagem img {
+  width: 100%;
+}
+
+@media (max-width: 667px) {
+  .butInicial {
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    width: 30%;
+  }
+
+}
+
+@media (max-width: 452px) {
+  .containerImagem {
+    display: none;
+  }
+
+  .containerLogoText {
+    position: absolute;
+    top: 25%;
+    left: 25%;
+    width: 80%;
+    margin: auto;
+  }
+
+  .titlePageInitial {
+    font-size: 1.563rem;
+  }
+
+  .butInicial {
+    top: 98%;
+    left: 2%;
+    width: 50%;
+  }
+  
+}

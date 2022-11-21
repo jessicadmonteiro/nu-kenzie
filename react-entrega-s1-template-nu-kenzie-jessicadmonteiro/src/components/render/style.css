@@ -1,0 +1,49 @@
+li {
+  width: 100%;
+  height: 5.438rem;
+  background: #f8f9fa;
+  border-radius: 0.25rem;
+  margin-left: -2.5rem;
+  padding: 0.625rem;
+  box-sizing: border-box;
+}
+
+li div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+li span {
+    display: flex;
+    align-items: center;
+}
+
+li h3 {
+    font-size: 1rem;
+    color: #212529;
+}
+
+li p {
+    font-size: 0.75rem;
+    color: #212529;
+    padding-right: 1.875rem;
+}
+
+li button {
+    width: 1.875rem;
+    height: 1.875rem;
+}
+
+.valueType {
+    text-align: justify;
+    margin-top: -0.5rem;
+}
+
+.Entrada {
+    border-left: solid 0.313rem #03B898;
+}
+
+.Despesa {
+    border-left: solid 0.313rem #E9ECEF;
+}
