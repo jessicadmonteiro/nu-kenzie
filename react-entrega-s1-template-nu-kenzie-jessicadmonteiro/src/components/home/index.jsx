@@ -7,13 +7,11 @@ import Register from "../register";
 
 function Home({ setPage }) {
   const [data, setData] = useState([]);
-  const [filter, setFilter] = useState("Todos") 
+  const [filter, setFilter] = useState("Todos");
 
-  
-    const arrayFilter = data.filter(
-      (element) => filter === "Todos" ? true : element.typeDescription === filter
-    );
-
+  const arrayFilter = data.filter((element) =>
+    filter === "Todos" ? true : element.typeDescription === filter
+  );
 
   function Remove(removeData) {
     const filterData = data.filter(
@@ -23,11 +21,25 @@ function Home({ setPage }) {
   }
 
   function VelueTotal(valueData) {
-    const mapValeuData = valueData
+
+    const valueEntrada = valueData.filter(
+      (element) => element.typeDescription === "Entrada"
+    );
+    const mapValeEntrada = valueEntrada
       .map((value) => +value.valueNumber)
       .reduce((acumulador, valorAtual) => acumulador + valorAtual, 0);
 
-    return mapValeuData;
+    const valueDespesa = valueData.filter(
+      (element) => element.typeDescription === "Despesa"
+    );
+    const mapValeuDespesa = valueDespesa
+      .map((value) => +value.valueNumber)
+      .reduce((acumulador, valorAtual) => acumulador - valorAtual, 0);
+
+    const total = mapValeEntrada + mapValeuDespesa
+    console.log(total)
+
+    return total
   }
 
   return (
@@ -53,9 +65,24 @@ function Home({ setPage }) {
           <div className="headerAside">
             <h3 className="titleFinancialSummary">Resumo financeiro</h3>
             <div className="containerButton">
-              <button className="buttonFilterHome" onClick={()=> setFilter("Todos")}>Todos</button>
-              <button className="buttonFilterHome" onClick={()=> setFilter("Entrada")}>Entradas</button>
-              <button className="buttonFilterHome" onClick={()=> setFilter("Despesa")}>Despesas</button>
+              <button
+                className="buttonFilterHome"
+                onClick={() => setFilter("Todos")}
+              >
+                Todos
+              </button>
+              <button
+                className="buttonFilterHome"
+                onClick={() => setFilter("Entrada")}
+              >
+                Entradas
+              </button>
+              <button
+                className="buttonFilterHome"
+                onClick={() => setFilter("Despesa")}
+              >
+                Despesas
+              </button>
             </div>
           </div>
           {data.length === 0 && (
@@ -77,7 +104,7 @@ function Home({ setPage }) {
               </ul>
             </section>
           )}
-          {arrayFilter.map(( data, index) => (
+          {arrayFilter.map((data, index) => (
             <Render
               key={index}
               description={data.description}
