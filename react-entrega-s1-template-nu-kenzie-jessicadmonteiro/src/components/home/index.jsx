@@ -37,7 +37,6 @@ function Home({ setPage }) {
       .reduce((acumulador, valorAtual) => acumulador - valorAtual, 0);
 
     const total = mapValeEntrada + mapValeuDespesa
-    console.log(total)
 
     return total
   }

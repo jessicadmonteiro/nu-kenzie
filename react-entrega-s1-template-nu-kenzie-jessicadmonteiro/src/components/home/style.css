@@ -265,6 +265,10 @@ ul {
 
 @media(max-width: 469px) {
 
+  .headerAside  {
+    display: block;
+  }
+
   .titleFinancialSummary {
     font-size: 0.75rem;
   }
@@ -275,7 +279,48 @@ ul {
     font-size: 0.519rem;
   }
 
+  select {
+    font-size: 0.625rem;
+    margin: auto;
+    padding-left: 0.625rem;
+  }
+
+
   .sectionNoData h2 {
     font-size: 0.75rem;
   }
+}
+
+@media(max-width: 379px) {
+  .textDescription {
+    font-size: 0.6rem; 
+  }
+  .inputDescription::placeholder {
+    font-size: 0.7rem;
+  }
+
+  .textEx {
+    font-size: 0.5rem;
+  }
+
+  .textValue {
+    font-size: 0.5rem;
+  }
+
+  .containerTextValue {
+    width: 85%;
+  }
+
+  .inputNumber {
+    height: 1.563rem;
+  }
+
+  select  {
+    height: 1.875rem;
+  }
+
+  .sectionNoData h2 {
+    font-size: 0.9rem;
+  }
+
 }
